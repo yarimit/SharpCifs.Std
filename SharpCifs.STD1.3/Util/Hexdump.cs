@@ -106,7 +106,8 @@ namespace SharpCifs.Util
                 ci += 16;
                 c[ci++] = '|';
                 //Sharpen.Runtime.GetCharsForString(NL, 0, NL_LENGTH, c, ci);
-                c = Nl.ToCharArray(0, NlLength);
+                char[] _c = Nl.ToCharArray(0, NlLength);
+                Array.Copy(_c, 0, c, ci, NlLength);
                 ci += NlLength;
             }
             while (si < length);
