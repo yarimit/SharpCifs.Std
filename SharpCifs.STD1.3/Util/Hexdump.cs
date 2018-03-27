@@ -21,7 +21,7 @@ namespace SharpCifs.Util
 {
     public class Hexdump
     {
-        private static readonly string Nl = "\r\n"; //Runtime.GetProperty("line.separator");
+        private static readonly string Nl = Environment.NewLine; //Runtime.GetProperty("line.separator");
 
         private static readonly int NlLength = Nl.Length;
 
